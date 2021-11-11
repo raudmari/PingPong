@@ -4,12 +4,12 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req,res) => {
-  res.rederect("/index.html");
+app.get("/", (req, res) => {
+  res.redirect("/index.html");
 });
 
 app.get("*", (req, res) => {
-  res.rederect("/index.html");
+  res.redirect("/index.html");
 });
 
 app.listen(3000, () => {
